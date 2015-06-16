@@ -3,9 +3,6 @@ package com.example.kinia.myfirst2dgame;
 import android.graphics.Canvas;
 import android.view.SurfaceHolder;
 
-/**
- * Created by kinia on 15.06.15.
- */
 public class MainThread extends Thread
 {
     private int FPS = 30;
