@@ -10,8 +10,8 @@ public class SmokePuff extends GameObject
     public SmokePuff(int x, int y)
     {
         r = 5;
-        super.x = x;
-        super.y = y;
+        this.x = x;
+        this.y = y;
     }
     public void update()
     {
