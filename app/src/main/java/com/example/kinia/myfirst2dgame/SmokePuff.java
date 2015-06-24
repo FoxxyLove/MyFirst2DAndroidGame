@@ -5,13 +5,13 @@ import android.graphics.Color;
 import android.graphics.Paint;
 
 public class SmokePuff extends GameObject
-{
+ {
     public int r;
     public SmokePuff(int x, int y)
     {
         r = 5;
-        this.x = x;
-        this.y = y;
+        super.x = x;
+        super.y = y;
     }
     public void update()
     {

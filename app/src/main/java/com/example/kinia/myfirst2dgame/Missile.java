@@ -2,7 +2,6 @@ package com.example.kinia.myfirst2dgame;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.view.animation.*;
 
 import java.util.Random;
 
@@ -19,7 +18,7 @@ public class Missile extends GameObject
         super.x=x;
         super.y=y;
         width=w;
-        heigh=h;
+        height=h;
         score=s;
 
         speed = 7 + (int) (rand.nextDouble()*score/30);
@@ -32,7 +31,7 @@ public class Missile extends GameObject
 
         for (int i=0; i<image.length; i++)
         {
-            image[i]=Bitmap.createBitmap(spritesheet,0,i*heigh,width,heigh);
+            image[i]=Bitmap.createBitmap(spritesheet,0,i*height,width,height);
         }
 
         animation.setFrames(image);

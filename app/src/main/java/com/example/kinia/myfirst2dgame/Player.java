@@ -5,7 +5,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
 
-public class Player extends GameObject{
+public class Player extends GameObject
+{
     private Bitmap spritesheet;
     private int score;
 
@@ -14,13 +15,13 @@ public class Player extends GameObject{
     private Animation animation = new Animation();
     private long startTime;
 
-    public Player(Bitmap res, int w, int h, int numFrames) {
-
+    public Player(Bitmap res, int w, int h, int numFrames)
+    {
         x = 100;
         y = GamePanel.HEIGHT / 2;
         dy = 0;
         score = 0;
-        heigh = h;
+        height = h;
         width = w;
 
         Bitmap[] image = new Bitmap[numFrames];
@@ -28,13 +29,12 @@ public class Player extends GameObject{
 
         for (int i = 0; i < image.length; i++)
         {
-            image[i] = Bitmap.createBitmap(spritesheet, i*width, 0, width, heigh);
+            image[i] = Bitmap.createBitmap(spritesheet, i*width, 0, width, height);
         }
 
         animation.setFrames(image);
         animation.setDelay(10);
         startTime = System.nanoTime();
-
     }
 
     public void setUp(boolean b){up = b;}
@@ -49,11 +49,12 @@ public class Player extends GameObject{
         }
         animation.update();
 
-        if(up){
+        if(up)
+        {
             dy -=1;
-
         }
-        else{
+        else
+        {
             dy +=1;
         }
 
@@ -73,9 +74,4 @@ public class Player extends GameObject{
     public void setPlaying(boolean b){playing = b;}
     public void resetDY(){dy = 0;}
     public void resetScore(){score = 0;}
-
-    public int getY() {
-
-        return y;
-    }
 }

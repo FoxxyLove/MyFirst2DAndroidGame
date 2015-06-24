@@ -9,40 +9,35 @@ public abstract class GameObject
     protected int dy;
     protected int dx;
     protected int width;
-    protected int heigh;
+    protected int height;
 
-    public void setX (int x)
+    public void setX(int x)
     {
         this.x = x;
     }
-
-    public void setY (int y)
+    public void setY(int y)
     {
         this.y = y;
     }
-
     public int getX()
     {
         return x;
     }
-
-    public int setY()
+    public int getY()
     {
         return y;
     }
-
-    public int getHeigh()
+    public int getHeight()
     {
-        return heigh;
+        return height;
     }
-
     public int getWidth()
     {
         return width;
     }
-
     public Rect getRectangle()
     {
-        return new Rect(x, y, x+width, y+heigh);
+        return new Rect(x, y, x+width, y+height);
     }
+
 }
