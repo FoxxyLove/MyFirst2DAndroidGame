@@ -276,7 +276,11 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
             final int savedState = canvas.save();
             canvas.scale(scaleFactorX, scaleFactorY);
             bg.draw(canvas);
-            player.draw(canvas);
+            if (!dissapear)
+            {
+                player.draw(canvas);
+            }
+
             //draw smokepuffs
             for(SmokePuff sp: smoke)
             {
@@ -459,7 +463,7 @@ public class GamePanel extends SurfaceView implements SurfaceHolder.Callback
             canvas.drawText("PRESS TO START", WIDTH / 2 - 50, HEIGHT / 2, paint1);
 
             paint1.setTextSize(20);
-            canvas.drawText("PRESS AND HOLD TO GO UP", WIDTH/2-50, HEIGHT/2+20, paint1);
+            canvas.drawText("PRESS AND HOLD TO GO UP", WIDTH / 2 - 50, HEIGHT/2+20, paint1);
             canvas.drawText("RELEASE TO GO DOWN", WIDTH/2-50, HEIGHT/2+40, paint1);
         }
     }
